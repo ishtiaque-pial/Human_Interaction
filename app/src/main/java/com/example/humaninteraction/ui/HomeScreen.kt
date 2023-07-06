@@ -56,6 +56,8 @@ import com.example.humaninteraction.ui.theme.HumanInteractionTheme
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.coroutines.cancellation.CancellationException
+import kotlin.math.pow
+import kotlin.math.sqrt
 import kotlin.random.Random
 
 @OptIn(ExperimentalComposeUiApi::class)
@@ -130,7 +132,7 @@ fun HomeScreen(columnCount: Int = 6, rowCount: Int = 4) {
                 offsetY.animateTo(
                     targetValue = screenHeight.toFloat(),
                     animationSpec = tween(
-                        durationMillis = 5000,
+                        durationMillis = 10000,
                         easing = LinearEasing
                     )
                 )
@@ -259,6 +261,10 @@ fun HomeScreen(columnCount: Int = 6, rowCount: Int = 4) {
     }
 
 }
+
+
+
+
 
 
 @Preview(showBackground = true)
